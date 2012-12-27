@@ -29,7 +29,7 @@
   },
   "dependencies": {
     "bytes": "~0.2.0",
-    "consolidate": "~0.5.0",
+    "consolidate": "git@github.com:Aomitayo/consolidate.js.git",
     "debug": "~0.7.0",
     "express": "3.0.4",
     "express-helpers": "git@github.com:Aomitayo/express-helpers.git",
