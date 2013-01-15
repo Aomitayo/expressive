@@ -1,7 +1,7 @@
 {
   "name": "expressive",
   "description": "Utilities for Express 3.0 apps",
-  "version": "1.0.0",
+  "version": "0.2.0",
   "homepage": "https://github.com/Aomitayo/expressive",
   "author": {
     "name": "Adedayo Omitayo",
