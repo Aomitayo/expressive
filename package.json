@@ -40,7 +40,9 @@
     "lingo": "0.0.5"
   },
   "devDependencies": {
-    "grunt": "~0.3.17"
+    "grunt": "~0.3.17",
+    "chai": "~1.4.2",
+    "mocha": "~1.8.1"
   },
   "keywords": []
 }
