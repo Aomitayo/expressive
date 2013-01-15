@@ -1,6 +1,6 @@
-var expect = require('chai').expect;
-
 var Injector = require('../lib/injector.js');
+var expect = require('chai').expect;
+var path = require('path');
 
 describe('Injector', function(){
 	var injector = new Injector({
@@ -38,7 +38,6 @@ describe('Injector', function(){
 	});
 
 	it('Should load and automaticaly name modules from an absolute path', function(){
-		var path = require('path');
 		var mdl = injector.get(path.join(__dirname, 'fixtures/simple-module.js'));
 		expect(mdl).to.not.be.null;
 		expect(mdl).to.have.property('prop1', 'prop1_value');
@@ -58,7 +57,7 @@ describe('Injector', function(){
 
 	});
 
-	it('Should be able to rename module loaded from a file path', function(){
+	it('Should be able to rename a module loaded from a file path', function(){
 		var path = require('path');
 		var mdl = injector.get(path.join(__dirname, 'fixtures/simple-module.js'), 'different-name');
 		expect(mdl).to.not.be.null;
@@ -93,4 +92,17 @@ describe('Injector', function(){
 		expect(injector.getNestedProperty(obj, '')).to.equal(obj);
 		expect(injector.getNestedProperty(obj, 'root.intermediate.destination')).to.equal('value');
 	});
+
+	it('Should support direct dependency registration', function(){
+		var dep = {'directProp':'directPropValue'};
+		injector.register('directDep', dep);
+		expect(injector.get('directDep')).to.equal(dep);
+	});
+
+	it('Should support the specification of a base path' , function(){
+		injector.basePath = path.resolve(__dirname, 'fixtures');
+		var mdl = injector.get('./simple-module.js');
+		expect(mdl).to.not.be.null;
+		expect(mdl).to.have.property('prop1', 'prop1_value');
+	})
 });
