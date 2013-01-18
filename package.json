@@ -3,6 +3,7 @@
   "description": "Utilities for Express 3.0 apps",
   "version": "0.2.0",
   "homepage": "https://github.com/Aomitayo/expressive",
+  "private":true,
   "author": {
     "name": "Adedayo Omitayo",
     "email": "adedayo.omitayo@flowswift.com"
