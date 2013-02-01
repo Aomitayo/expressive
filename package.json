@@ -30,13 +30,13 @@
   },
   "dependencies": {
     "bytes": "~0.2.0",
-    "consolidate": "git@github.com:Aomitayo/consolidate.js.git",
+    "consolidate": "git://github.com/Aomitayo/consolidate.js.git",
+    "injectr": "git://github.com/Aomitayo/injectr.git",
+    "qejs": "git://github.com/Aomitayo/QEJS.git",
+    "express-helpers": "git://github.com/Aomitayo/express-helpers.git",
     "debug": "~0.7.0",
     "express": "3.0.4",
-    "express-helpers": "git@github.com:Aomitayo/express-helpers.git",
     "methods": "0.0.1",
-    "injectr": "git://github.com/Aomitayo/injectr.git",
-    "qejs": "git@github.com:Aomitayo/QEJS.git",
     "q": "~0.8.11",
     "lingo": "0.0.5"
   },
